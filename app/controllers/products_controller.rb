@@ -19,7 +19,8 @@ class ProductsController < ApplicationController
 
   def create
     Product.create(product_params)
-    redirect_to products_path
+    # redirect_to products_path
+    render json: @product
   end
 
   def show
